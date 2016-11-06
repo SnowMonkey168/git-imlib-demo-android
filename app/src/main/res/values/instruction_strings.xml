@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome_message">
+        <![CDATA[
+            融云SDK-IMLib使用指南
+        ]]>
+    </string>
+
+    <string name="get_token">
+        <![CDATA[
+            获取 Token：\n
+            Token 即用户令牌，相当于您 APP 上当前用户连接融云的身份凭证。\n
+            在您连接融云服务器之前，您需要请求您的 App Server，您的 App Server 通过 Server API 获取 Token 并返回给您的客户端，客户端获取到这个 Token 即可进入下一步连接融云服务器。\n
+            \t为什么必须在服务器端请求 Token，客户端不提供获取 Token 的接口？\n
+            因为获取 Token 时需要提供 App Key 和 App Secret 。如果在客户端请求 Token，假如您的 App 代码一旦被反编译，则会导致您的 App Key 和 App Secret 泄露。所以，务必在您的服务器端获取 Token。\n
+            \t我们在开发者控制台提供了 API 调试的功能，在开发初期阶段，您可以通过其中获取 Token 功能，手动获取 Token 进行测试。\n
+        ]]>
+    </string>
+
+    <string name="connect_rongserver">
+        连接服务器前，确认已通过融云 Server API 接口获取 Token，\n
+        将获得的 Token 传入 RongIMClient .connect 方法，开始连接服务器。\n
+        在整个应用程序全局，只需要调用一次 connect 方法，SDK 会负责自动重连。
+    </string>
+</resources>
